@@ -41,6 +41,8 @@ Reponse from every method call has the 'status' field which is a String and the 
     //set payload here and proceed to make a method call
     $response = $remitaGatewayService->choiceOfMethod($choiceOfMethodPayload);
     var_dump($response['data']);
+	var_dump($response['data']['responseCode']);
+	var_dump($response['data']['responseDescription']);
     
     Note: choiceOfMethod is an of the method below.
  ```
