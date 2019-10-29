@@ -2,7 +2,7 @@
 
 namespace com\systemspecs;
 
-include "Util/Connections.php";
+include "Connections.php";
 
 class HTTPUtil implements Connections
 {
