@@ -8,6 +8,7 @@ include 'Request/AddAccount/AddAccountPayload.php';
 include 'Request/SinglePaymentStatus/SinglePaymentStatusPayload.php';
 include 'Request/BulkPaymentStatus/BulkPaymentStatusPayload.php';
 include 'Request/SinglePayment/SinglePaymentPayload.php';
+include 'Credentials.php';
 class TestRITSServices
 {
 
@@ -25,13 +26,13 @@ class TestRITSServices
         $remitaGatewayService = new RITsGatewayService($credentials);
 
         // ACTIVE BANKS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//        $requestId = "137976726987996587548970333";
+//        $requestId = "1379767296987996587548970333";
 //        $payload =  new ActiveBanksPayload($requestId);
 //        $response = $remitaGatewayService->activeBanks($payload);
 //        return $response;
 
         // ACCOUNT INQUIRY++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//        $requestId = "13783653997340333";
+//        $requestId = "1378365366997340333";
 //        $accountNo = "057200559446";
 //        $bankCode = "057";
 //        $accountEnquiryPayload = new AccountEnquiryPayload($requestId, $accountNo, $bankCode);

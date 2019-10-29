@@ -2,7 +2,6 @@
 
 namespace com\systemspecs;
 // Define a class
-include 'Config/Credentials.php';
 include 'Constants/ApplicationUrl.php';
 include 'Request/AccountEnquiry/AccountEnquiryPayload.php';
 include 'Request/BulkPayment/BulkPaymentInfo.php';
