@@ -1,6 +1,5 @@
 {
     "name": "remita/rits",
-	"version": "v1.0.0",
     "description": "This is the official package for Remita Interbank Transfer Service from SystemSpecs.",
     "type": "library",
     "license": "ISC",
