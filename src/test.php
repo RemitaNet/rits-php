@@ -3,11 +3,11 @@ namespace com\systemspecs;
 
 
 include 'RITsGatewayService.php';
-include 'Request/ActiveBanks/ActiveBanksPayload.php';
-include 'Request/AddAccount/AddAccountPayload.php';
-include 'Request/SinglePaymentStatus/SinglePaymentStatusPayload.php';
-include 'Request/BulkPaymentStatus/BulkPaymentStatusPayload.php';
-include 'Request/SinglePayment/SinglePaymentPayload.php';
+include 'ActiveBanksPayload.php';
+include 'AddAccountPayload.php';
+include 'SinglePaymentStatusPayload.php';
+include 'BulkPaymentStatusPayload.php';
+include 'SinglePaymentPayload.php';
 include 'Credentials.php';
 class TestRITSServices
 {
@@ -26,7 +26,7 @@ class TestRITSServices
         $remitaGatewayService = new RITsGatewayService($credentials);
 
         // ACTIVE BANKS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//        $requestId = "1379767296987996587548970333";
+//        $requestId = "137976729698799658753348970333";
 //        $payload =  new ActiveBanksPayload($requestId);
 //        $response = $remitaGatewayService->activeBanks($payload);
 //        return $response;

@@ -3,15 +3,15 @@
 namespace com\systemspecs;
 // Define a class
 include 'Constants/ApplicationUrl.php';
-include 'Request/AccountEnquiry/AccountEnquiryPayload.php';
-include 'Request/BulkPayment/BulkPaymentInfo.php';
-include 'Request/BulkPayment/BulkPaymentPayload.php';
-include 'Request/BulkPayment/PaymentDetails.php';
-include 'Request/BulkPayment/EncryptedBulkInfo.php';
-include 'Request/BulkPayment/EncryptedPaymentDetails.php';
-include 'Request/ValidateAccountOTP/AuthParams.php';
-include 'Request/ValidateAccountOTP/ValidateOtpPayload.php';
-include 'Request/ValidateAccountOTP/EncyptedAuthParams.php';
+include 'AccountEnquiryPayload.php';
+include 'BulkPaymentInfo.php';
+include 'BulkPaymentPayload.php';
+include 'PaymentDetails.php';
+include 'EncryptedBulkInfo.php';
+include 'EncryptedPaymentDetails.php';
+include 'AuthParams.php';
+include 'ValidateOtpPayload.php';
+include 'EncyptedAuthParams.php';
 include 'Util/AES128CBC.php';
 include 'Util/HTTPUtil.php';
 include 'BaseResponse.php';
