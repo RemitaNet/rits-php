@@ -10,7 +10,9 @@ The workflow to getting started on RITs is as follows:
 # Installation
 Include the library in your project using composer:
  ```php
-composer require "remita/rits"
+
+composer require remita/rits:dev-master
+
  ```
 ## Requirements
 PHP 5.6 or above.
