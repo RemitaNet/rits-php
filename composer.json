@@ -1,0 +1,22 @@
+{
+    "name": "remita/rits",
+	"version": "v1.0.0",
+    "description": "This is the official package for Remita Interbank Transfer Service from SystemSpecs.",
+    "type": "library",
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "Ilesanmi Omoniyi",
+            "email": "ilesanmi@systemspecs.com.ng"
+        }
+    ],
+    "minimum-stability": "stable",
+	"repositories": [{
+		"type": "vcs",
+		"url": "https://github.com/RemitaNet/rits-php"
+	}],
+	"autoload": {
+		"psr-4": {"com\\systemspecs\\": "src/"}
+	},
+    "require": {}
+}
