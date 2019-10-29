@@ -26,18 +26,18 @@ class TestRITSServices
         $remitaGatewayService = new RITsGatewayService($credentials);
 
         // ACTIVE BANKS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        $requestId = "137976729698799658753348970333";
-        $payload =  new ActiveBanksPayload($requestId);
-        $response = $remitaGatewayService->activeBanks($payload);
-        return $response;
+//        $requestId = "137976729698799658753348970333";
+//        $payload =  new ActiveBanksPayload($requestId);
+//        $response = $remitaGatewayService->activeBanks($payload);
+//        return $response;
 
         // ACCOUNT INQUIRY++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//        $requestId = "1378365366997340333";
-//        $accountNo = "057200559446";
-//        $bankCode = "057";
-//        $accountEnquiryPayload = new AccountEnquiryPayload($requestId, $accountNo, $bankCode);
-//        $response = $remitaGatewayService->accountEnquiry($accountEnquiryPayload);
-//        return $response;
+        $requestId = "1378365366870978978997340333";
+        $accountNo = "057200559446";
+        $bankCode = "057";
+        $accountEnquiryPayload = new AccountEnquiryPayload($requestId, $accountNo, $bankCode);
+        $response = $remitaGatewayService->accountEnquiry($accountEnquiryPayload);
+        return $response;
 
         // ADD ACCOUNT++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //        $requestId = "1113797698372654888970333";
