@@ -224,6 +224,10 @@ This method lists the banks that are active on the RITs platform. required field
     $response = $remitaGatewayService->activeBanks($payload);
 ````
 
+## Useful links
+* Join our Slack Developer/Support channel at http://bit.ly/RemitaDevSlack
+    
 ## Support
-For all other support needs, support@remita.net
+- For all other support needs, support@remita.net
+- To contribute to this repo, create an issue on what you intend to fix or update, make a PR and team will look into it and merge.
  
