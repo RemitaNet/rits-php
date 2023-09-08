@@ -1,24 +1,32 @@
 # Remita Interbank Transfer Service (RITs) PHP SDK
-This is the PHP SDK for the Remita Interbank Transfer Service.
+---
+- [Overview](#Overview)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Contributing](#Contributing)
 
-# Prerequisites
+---
+## Overview
+**This is the PHP SDK for the Remita Interbank Transfer Service.**
+
+#### Prerequisites
 The workflow to getting started on RITs is as follows:
 
 *  Register a profile on Remita: You can visit [Remita](https://login.remita.net) to sign-up if you are not already registered as a merchant/biller on the platform.
 *  Receive the Remita credentials that certify you as a Biller: Remita will send your merchant ID and an API Key necessary to secure your handshake to the Remita platform.
 
-# Installation
+## Installation
 Include the library in your project using composer:
  ```php
 
 composer require remita/rits:dev-master
 
  ```
-## Requirements
+#### Requirements
 PHP 5.6 or above.
 
-# Basic Usage
-## Configuration
+## Usage
+#### Configuration
 All merchant credentials needed to use RITs are being setup by instantiating the Credential Class and set the properties 
 in this class accordingly. Properties such as MerchantId, ApiKey, ApiToken, Key, Iv and the Environment needs to be set.
  
@@ -37,7 +45,7 @@ right credentials. By default Environment is DEMO
 
         $remitaGatewayService = new RITsGatewayService($credentials);
  ```
-## Response
+#### Response
 Reponse from every method call has the 'status' field which is a String and the 'data' field which is Object. The sample code below show how to access the methods
  ```php
     //set payload here and proceed to make a method call
@@ -49,8 +57,8 @@ Reponse from every method call has the 'status' field which is a String and the 
     Note: choiceOfMethod is an of the method below.
  ```
  
-# METHODS
-## Adding Account(s)
+### Methods
+#### Adding Account(s)
 Adding an account to your merchant profile on the RITs is a dual process. 
 * The first step is to AddAccount, Fields required to add account includes the following;
 	1. accountNo: This is the number of the bank account being linked to merchant profile
@@ -64,7 +72,7 @@ Adding an account to your merchant profile on the RITs is a dual process.
         $addAccountPayload = new AddAccountPayload($requestId, $accountNo, $bankCode);
         $response = $remitaGatewayService->addAccount($addAccountPayload);
  ```
-## Validate Accounts
+#### Validate Accounts
 * The second step validates the account holder via bank authentication on the account details. You will be required by 	your bank to validate the account details the AddAccount request is being issued for, required fields(Payloads) are as follow;
 	1. card: This is the one of the authentication detail required by the bank from the account owner to validate 	AddAccount request
 	2. otp: This is the another authentication detail required by the bank from the account owner to validate AddAccount 	request
@@ -90,7 +98,7 @@ Adding an account to your merchant profile on the RITs is a dual process.
 Successful authentication through the bank links the designated account to the corresponding merchant profile on the
 RITs platform.
 
-## Payments
+#### Payments
 Payments on the RITs platform can only be made from Remita-identifiable accounts. This means that before an account
 can be debited on the RITs, it must be linked to a profile. Merchants may process payments via the following SDK
 methods on the platform:
@@ -177,7 +185,7 @@ methods on the platform:
 
 ```
 
-## Payment Request Status
+#### Payment Request Status
 The payment request status method essentially retrieves the status of a previous payment request(Single payment and Bulk payment) using its transaction reference.
 
 * Single Payment Request Status:
@@ -202,7 +210,7 @@ The payment request status method essentially retrieves the status of a previous
      $response = $remitaGatewayService->bulkPaymentStatus($bulkPaymentStatusPayload);
 ```
  
-## Account Enquiry
+#### Account Enquiry
 Payment Request Status finds all available information on a specific account, required fields(Payloads) are as follow;
 	1. accountNo: Account number of tokenized account to be looked up
 	2. bankCode: The bank code where the account is domiciled. Use the Banks Enquiry method
@@ -215,7 +223,7 @@ Payment Request Status finds all available information on a specific account, re
     $response = $remitaGatewayService->accountEnquiry($accountEnquiryPayload);
 ```
 
-## Bank Enquiry
+#### Bank Enquiry
 This method lists the banks that are active on the RITs platform. required fields(Payloads) are as follow;
 	1. requestId: This uniquely identifies the request 
 ```php
@@ -224,10 +232,17 @@ This method lists the banks that are active on the RITs platform. required field
     $response = $remitaGatewayService->activeBanks($payload);
 ````
 
-## Useful links
-* Join our Slack Developer/Support channel at http://bit.ly/RemitaDevSlack
+## Contributing
+- To contribute to this repo, follow these guidelines for creating issues, proposing new features, and submitting pull requests:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b "feature-name"`
+3. Make your changes and commit: `git commit -m "added some new features"`
+4. Push your changes: `git push origin feature-name`
+5. Submit a Pull Request (PR).
+
+### Useful links
+* Join our [Slack](http://bit.ly/RemitaDevSlack) community and support channel 
     
-## Support
+### Support
 - For all other support needs, support@remita.net
-- To contribute to this repo, create an issue on what you intend to fix or update, make a PR and team will look into it and merge.
- 
